@@ -5,14 +5,14 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { Loja } from '../@types/loja';
 import { RootStackParamList } from '../@types/loja';
 
+type NavigationProp = StackNavigationProp<RootStackParamList, "Nome">
+
 interface Props {
   loja: Loja;
 }
 
-
-
 export default function LojaCard({ loja }: Props) {
-  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<NavigationProp>();
   return (
     <TouchableOpacity 
       style={styles.card}

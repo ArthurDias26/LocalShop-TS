@@ -1,3 +1,8 @@
+export type RootStackParamList = {
+  Nome: undefined;
+  Detalhes: {loja: Loja};
+}
+
 export interface Loja {
     id: string;
     nome: string;
@@ -6,7 +11,3 @@ export interface Loja {
     distancia: string;
     descricao?: string;
 }
-
-export type RootStackParamList = {
-  Detalhes: {loja: Loja}
-};
